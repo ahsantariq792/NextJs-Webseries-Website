@@ -19,6 +19,9 @@
     margin: 2% 0;
 }
 
+.container{
+    padding: 10%;
+}
 
 .grid_two_section {
     width: 100%;
@@ -34,6 +37,7 @@
 
 .movie_title {
     margin: 3.2rem 0 3.2rem 0;
+    font-weight: bold;
 }
 
 .movie_title span {

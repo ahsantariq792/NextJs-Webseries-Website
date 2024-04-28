@@ -9,7 +9,7 @@ const Movie = async () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'd03cd56482msh7a9abbbc0e40e53p1665c1jsn4031ddce930d',
+            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
             'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
         }
     };
@@ -22,14 +22,12 @@ const Movie = async () => {
         <>
             <section className={styles.movieSection}>
                 <h1 className="text-center">Series & Movie</h1>
-                <div className={styles.container}>
-                    <div className={styles.card_section}>
-                        {
-                            data.map((movie, index) =>
-                                <MovieCard key={index} {...movie} />
-                            )
-                        }
-                    </div>
+                <div className={styles.card_section}>
+                    {
+                        data.map((movie, index) =>
+                            <MovieCard key={index} {...movie} />
+                        )
+                    }
                 </div>
             </section>
         </>
